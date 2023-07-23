@@ -1,0 +1,18 @@
+{
+    "modules": [
+        "dashboard",
+        "finder",
+        "home",
+        "home/detail_product",
+        "login",
+        "menu_profile",
+        "register",
+        "splashscreen",
+        "navigation",
+        "home_new"
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "unfreezed": true,
+    "use_cubit": false
+}

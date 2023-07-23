@@ -1,0 +1,232 @@
+{
+    "__className": "DiskusiProductModel", // <- The base class name of the object.
+    // It's possible to override the default path with a new one by adding "__path" key.
+    // - it's useful if you want split your models to different workspace directories.tio
+    "__path": "/lib/model/diskusi_product",
+    // <- this is not required.
+    
+    
+        "data": [
+            {
+                "id": 150,
+                "user": {
+                    "id": 25,
+                    "name": "Cinta Yulianti",
+                    "photo": null
+                },
+                "content": "ini content",
+                "answers_total": 1,
+                "answers": [
+                    {
+                        "id": 275,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "ini content",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    }
+                ],
+                "time": "2023-07-05 09:47:22",
+                "time_human": "1 hari yang lalu"
+            },
+            {
+                "id": 149,
+                "user": {
+                    "id": 25,
+                    "name": "Cinta Yulianti",
+                    "photo": null
+                },
+                "content": "Non ea facilis nesciunt debitis praesentium.",
+                "answers_total": 2,
+                "answers": [
+                    {
+                        "id": 273,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Aspernatur sed eos reprehenderit ut dolor.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    },
+                    {
+                        "id": 274,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Ipsa deserunt quis voluptates voluptatibus id qui.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    }
+                ],
+                "time": "2023-07-05 09:47:22",
+                "time_human": "1 hari yang lalu"
+            },
+            {
+                "id": 148,
+                "user": {
+                    "id": 25,
+                    "name": "Cinta Yulianti",
+                    "photo": null
+                },
+                "content": "Consequatur excepturi ut eaque odit qui veritatis.",
+                "answers_total": 2,
+                "answers": [
+                    {
+                        "id": 271,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Quia dolorum adipisci eos minima quae voluptas eos et.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    },
+                    {
+                        "id": 272,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Repudiandae est aut eos adipisci reprehenderit.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    }
+                ],
+                "time": "2023-07-05 09:47:22",
+                "time_human": "1 hari yang lalu"
+            },
+            {
+                "id": 147,
+                "user": {
+                    "id": 25,
+                    "name": "Cinta Yulianti",
+                    "photo": null
+                },
+                "content": "Fugit cupiditate voluptatibus magnam ducimus vero voluptas est.",
+                "answers_total": 2,
+                "answers": [
+                    {
+                        "id": 269,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Quia repellat possimus et adipisci.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    },
+                    {
+                        "id": 270,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Amet ut dolor iusto eos quam.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    }
+                ],
+                "time": "2023-07-05 09:47:22",
+                "time_human": "1 hari yang lalu"
+            },
+            {
+                "id": 146,
+                "user": {
+                    "id": 25,
+                    "name": "Cinta Yulianti",
+                    "photo": null
+                },
+                "content": "Esse dolor aut consequatur in.",
+                "answers_total": 2,
+                "answers": [
+                    {
+                        "id": 267,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Perspiciatis corrupti non voluptates.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    },
+                    {
+                        "id": 268,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Ad voluptates ut veritatis ex et.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    }
+                ],
+                "time": "2023-07-05 09:47:22",
+                "time_human": "1 hari yang lalu"
+            },
+            {
+                "id": 145,
+                "user": {
+                    "id": 25,
+                    "name": "Cinta Yulianti",
+                    "photo": null
+                },
+                "content": "Ducimus recusandae ratione quae ipsa.",
+                "answers_total": 2,
+                "answers": [
+                    {
+                        "id": 265,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Eos totam iure ea alias veritatis natus.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    },
+                    {
+                        "id": 266,
+                        "user": {
+                            "id": 25,
+                            "name": "Cinta Yulianti",
+                            "photo": null
+                        },
+                        "content": "Facere praesentium vitae non molestiae quia.",
+                        "time": "2023-07-05 09:47:22",
+                        "time_human": "1 hari yang lalu"
+                    }
+                ],
+                "time": "2023-07-05 09:47:22",
+                "time_human": "1 hari yang lalu"
+            }
+        ],
+        "links": {
+            "first": "http://smgdev.top/ecomm/product/25/discussion?page=1",
+            "last": null,
+            "prev": null,
+            "next": null
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "path": "http://smgdev.top/ecomm/product/25/discussion",
+            "per_page": 15,
+            "to": 6
+        }
+    }
+    
+    
+    
