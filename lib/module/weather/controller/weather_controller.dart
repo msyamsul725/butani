@@ -21,7 +21,6 @@ class WeatherController extends GetxController {
   }
 
   getData() async {
-    
     var result = await services.getWeather();
 
     result.fold(

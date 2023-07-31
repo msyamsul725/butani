@@ -10,7 +10,8 @@
         "splashscreen",
         "navigation",
         "home_new",
-        "weather"
+        "weather",
+        "detail_plant"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

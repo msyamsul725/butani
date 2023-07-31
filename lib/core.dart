@@ -22,10 +22,11 @@ export 'package:butani/model/home/home_model.dart';
 export 'package:butani/model/home/latest.dart';
 export 'package:butani/model/home/other.dart';
 export 'package:butani/model/review_product/customer.dart';
-
 export 'package:butani/model/review_product/review_product_model.dart';
 export 'package:butani/module/dashboard/controller/dashboard_controller.dart';
 export 'package:butani/module/dashboard/view/dashboard_view.dart';
+export 'package:butani/module/detail_plant/controller/detail_plant_controller.dart';
+export 'package:butani/module/detail_plant/view/detail_plant_view.dart';
 export 'package:butani/module/finder/controller/finder_controller.dart';
 export 'package:butani/module/finder/view/finder_view.dart';
 export 'package:butani/module/home/controller/home_controller.dart';
@@ -48,6 +49,8 @@ export 'package:butani/module/splashscreen/controller/splashscreen_controller.da
 export 'package:butani/module/splashscreen/view/splashscreen_view.dart';
 export 'package:butani/module/splashscreen/widget/splashscreen.dart';
 export 'package:butani/module/weather/controller/weather_controller.dart';
+export 'package:butani/module/weather/data/weather_model.dart';
+export 'package:butani/module/weather/data/weather_services.dart';
 export 'package:butani/module/weather/view/weather_view.dart';
 export 'package:butani/routes/router.dart';
 export 'package:butani/routes/routes_name.dart';
