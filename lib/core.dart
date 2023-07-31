@@ -47,6 +47,8 @@ export 'package:butani/module/register/view/register_view.dart';
 export 'package:butani/module/splashscreen/controller/splashscreen_controller.dart';
 export 'package:butani/module/splashscreen/view/splashscreen_view.dart';
 export 'package:butani/module/splashscreen/widget/splashscreen.dart';
+export 'package:butani/module/weather/controller/weather_controller.dart';
+export 'package:butani/module/weather/view/weather_view.dart';
 export 'package:butani/routes/router.dart';
 export 'package:butani/routes/routes_name.dart';
 export 'package:butani/service/detail_product_service/detail_product_service.dart';
@@ -54,5 +56,4 @@ export 'package:butani/service/diskusi_produksi_service/diskusi_produksi_service
 export 'package:butani/service/home_service/home_service.dart';
 export 'package:butani/service/review_service/review_service.dart';
 export 'package:butani/shared/const.dart';
-
 export 'package:butani/shared/theme.dart';

@@ -1,10 +1,8 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:butani/core.dart';
-
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -14,10 +12,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  
   @override
   Widget build(BuildContext context) {
-        ScreenUtil.init(context, designSize: const Size(414, 896));
+    ScreenUtil.init(context, designSize: const Size(414, 896));
     return Builder(builder: (context) {
       Future<bool> loading() async {
         await Future.delayed(const Duration(seconds: 2));
@@ -46,14 +43,14 @@ class _SplashScreenState extends State<SplashScreen> {
                 builder: (BuildContext context, AsyncSnapshot snapshot) {
                   if (snapshot.data == null) {
                     return Align(
-              alignment: Alignment.centerRight,
-              child: Image.asset(
-                'assets/images/splash_butani.png',
-                height: 548.h,
-                width: 361.w,
-                fit: BoxFit.fitHeight,
-              ),
-            );
+                      alignment: Alignment.centerRight,
+                      child: Image.asset(
+                        'assets/images/splash_butani.png',
+                        height: 548.h,
+                        width: 361.w,
+                        fit: BoxFit.fitHeight,
+                      ),
+                    );
                   }
                   return Container();
                 },

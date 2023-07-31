@@ -32,7 +32,7 @@ class _ProductDetailState extends State<ProductDetail> {
   }
 
   bool readIsMore = false;
-  int ? maxline;
+  int? maxline;
 
   List<Datum> review = <Datum>[];
 
@@ -588,9 +588,8 @@ class _ProductDetailState extends State<ProductDetail> {
                     productDetail != null
                         ? "${productDetail!.description} "
                         : "-",
-                        maxLines: readIsMore ? null : 1,
+                    maxLines: readIsMore ? null : 1,
                     style: TextStyle(
-                      
                       fontSize: 14.0,
                     ),
                   ),
@@ -602,14 +601,12 @@ class _ProductDetailState extends State<ProductDetail> {
                     width: MediaQuery.of(context).size.width,
                     child: InkWell(
                       onTap: () {
-                        readIsMore =! readIsMore;
-                           maxline = readIsMore ? null : 5;
-                          setState(() {
-                            
-                          });
+                        readIsMore = !readIsMore;
+                        maxline = readIsMore ? null : 5;
+                        setState(() {});
                       },
-                      child:   Text(
-                        readIsMore ? "Perkecil " :"Baca Selengkapnya",
+                      child: Text(
+                        readIsMore ? "Perkecil " : "Baca Selengkapnya",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: Colors.blue,
@@ -905,7 +902,6 @@ class _ProductDetailState extends State<ProductDetail> {
                     height: 20.0,
                   ),
                   SizedBox(
-                  
                     child: ListView.builder(
                       controller: ScrollController(),
                       itemCount: review.length,
@@ -1092,7 +1088,6 @@ class _ProductDetailState extends State<ProductDetail> {
                     height: 20.0,
                   ),
                   SizedBox(
-           
                     child: ListView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       itemCount: diskusiProduct.length,
@@ -1169,7 +1164,6 @@ class _ProductDetailState extends State<ProductDetail> {
                                         itemCount: item.answers!.length,
                                         shrinkWrap: true,
                                         padding: EdgeInsets.zero,
-                                 
                                         itemBuilder: (context, index) {
                                           var items = item.answers![index];
                                           return Container(

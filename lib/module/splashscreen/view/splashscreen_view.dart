@@ -15,18 +15,18 @@ class SplashscreenView extends StatelessWidget {
         controller.view = this;
 
         return Scaffold(
-            backgroundColor: primaryBlue,
-            body: Align(
-              alignment: Alignment.centerRight,
-              child: Image.asset(
-                '',
-                // 'assets/images/splash_butani.png',
-                height: 548.h,
-                width: 361.w,
-                fit: BoxFit.fitHeight,
-              ),
+          backgroundColor: primaryBlue,
+          body: Align(
+            alignment: Alignment.centerRight,
+            child: Image.asset(
+              '',
+              // 'assets/images/splash_butani.png',
+              height: 548.h,
+              width: 361.w,
+              fit: BoxFit.fitHeight,
             ),
-          );
+          ),
+        );
       },
     );
   }

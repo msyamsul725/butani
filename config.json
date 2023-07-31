@@ -9,7 +9,8 @@
         "register",
         "splashscreen",
         "navigation",
-        "home_new"
+        "home_new",
+        "weather"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,

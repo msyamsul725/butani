@@ -221,7 +221,9 @@ class HomeNewView extends StatelessWidget {
                         {
                           "icon": MdiIcons.weatherCloudy,
                           "label": "Weather",
-                          "onTap": () {},
+                          "onTap": () {
+                            Get.to(const WeatherView());
+                          },
                         },
                         {
                           "icon": MdiIcons.store,
