@@ -1,11 +1,14 @@
 import 'package:get/get.dart';
-import '../../../model/home/other.dart';
-import '../../../service/home_service/home_service.dart';
+
 import '../view/home_new_view.dart';
 
 class HomeNewController extends GetxController {
   HomeNewView? view;
 
+  String userName = '';
+  int wallet = 0;
+  int coins = 0;
+  String avatar = '';
   List newCourse = [
     {
       "image":

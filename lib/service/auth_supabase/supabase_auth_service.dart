@@ -240,4 +240,8 @@ class AuthServiceSupabase {
   doLoginWa() async {
     await supabaseHandler.auth.signInWithOtp(phone: '6289520177891');
   }
+
+  Stream<List> getUsers() {
+    return supabaseHandler.from("users").stream(primaryKey: ['id']);
+  }
 }

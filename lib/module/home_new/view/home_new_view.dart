@@ -34,10 +34,8 @@ class HomeNewView extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      "https://i.ibb.co/PGv8ZzG/me.jpg",
-                    ),
+                  CircleAvatar(
+                    backgroundImage: NetworkImage(controller.avatar),
                   ),
                   Container(
                     width: MediaQuery.sizeOf(context).width * 0.6,
@@ -93,105 +91,135 @@ class HomeNewView extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    height: MediaQuery.sizeOf(context).height * 0.1,
-                    decoration: BoxDecoration(
-                      color: green67,
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(
-                          16.0,
-                        ),
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          width: MediaQuery.sizeOf(context).width * 0.4,
+                  StreamBuilder(
+                      stream: AuthServiceSupabase().getUsers(),
+                      builder: (context, snapshot) {
+                        if (snapshot.hasError) {
+                          return Center(
+                              child: SizedBox(
+                            width: MediaQuery.sizeOf(context).width * 0.6,
+                            child: const Text(
+                                "Error: Ada masalah dijaringan ,  harap periksa jaringan anda"),
+                          ));
+                        }
+
+                        if (snapshot.data == null) {
+                          return const Center(
+                              child: CircularProgressIndicator());
+                        }
+
+                        final data = snapshot.data;
+                        for (var dataNew in data!) {
+                          controller.userName = dataNew['full_name'];
+                          controller.coins = dataNew['coins'];
+                          controller.wallet = dataNew['wallet'];
+                          controller.avatar = dataNew['avatars'] ??
+                              "https://i.ibb.co/S32HNjD/no-image.jpg";
+                        }
+                        return Container(
+                          padding: const EdgeInsets.all(12),
+                          height: MediaQuery.sizeOf(context).height * 0.1,
+                          decoration: BoxDecoration(
+                            color: green67,
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(
+                                16.0,
+                              ),
+                            ),
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.white,
-                                child: Icon(
-                                  MdiIcons.wallet,
-                                  color: black300,
+                              SizedBox(
+                                width: MediaQuery.sizeOf(context).width * 0.4,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.white,
+                                      child: Icon(
+                                        MdiIcons.wallet,
+                                        color: black300,
+                                      ),
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        const Text(
+                                          "My Wallet",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14.0,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 10.0,
+                                        ),
+                                        Text(
+                                          "Rp ${controller.wallet}",
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12.0,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
                               ),
-                              const Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "My Wallet",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14.0,
+                              Container(
+                                width: 2,
+                                decoration: const BoxDecoration(
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                width: MediaQuery.sizeOf(context).width * 0.4,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.white,
+                                      child: Icon(
+                                        MdiIcons.gold,
+                                        color: black300,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                  Text(
-                                    "Rp 200.000",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 12.0,
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        const Text(
+                                          "My Coins",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14.0,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 10.0,
+                                        ),
+                                        Text(
+                                          " ${controller.coins}",
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12.0,
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ],
                           ),
-                        ),
-                        Container(
-                          width: 2,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.sizeOf(context).width * 0.4,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.white,
-                                child: Icon(
-                                  MdiIcons.gold,
-                                  color: black300,
-                                ),
-                              ),
-                              const Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "My Coins",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14.0,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                  Text(
-                                    "200.000",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 12.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                        );
+                      }),
                   const SizedBox(
                     height: 20.0,
                   ),
