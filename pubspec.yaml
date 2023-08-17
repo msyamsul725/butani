@@ -53,6 +53,11 @@ dependencies:
   geolocator: ^9.0.2
   dartz: ^0.10.1
   logger: ^1.4.0
+  fancy_shimmer_image: ^2.0.3
+  flutter_carousel_widget: ^2.1.0
+  pinput: ^2.2.16
+  supabase_flutter: ^1.10.3
+  
 
 
 dev_dependencies:

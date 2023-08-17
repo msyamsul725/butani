@@ -1,5 +1,7 @@
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:butani/core.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -306,32 +308,31 @@ class HomeNewView extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.sizeOf(context).width,
                     height: 180.0,
-                    child: ListView.builder(
-                      physics: const BouncingScrollPhysics(),
+                    child: FlutterCarousel.builder(
                       itemCount: controller.newCourse.length,
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
+                      itemBuilder: (context, index, pageView) {
                         var item = controller.newCourse[index];
-                        return Container(
-                          margin: const EdgeInsets.only(left: 10),
-                          width: MediaQuery.sizeOf(context).width * 0.8,
-                          height: 180.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                item['image'],
-                              ),
-                              fit: BoxFit.cover,
-                            ),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(
-                                16.0,
-                              ),
+                        return Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: FancyShimmerImage(
+                              imageUrl: item['image'],
+                              width: MediaQuery.sizeOf(context).width * 0.88,
+                              boxFit: BoxFit.cover,
                             ),
                           ),
                         );
                       },
+                      options: CarouselOptions(
+                          height: 200,
+                          autoPlay: true,
+                          enableInfiniteScroll: true,
+                          aspectRatio: 15 / 6,
+                          enlargeCenterPage: true,
+                          initialPage: 1),
                     ),
                   ),
                   const SizedBox(
@@ -369,9 +370,7 @@ class HomeNewView extends StatelessWidget {
                         itemBuilder: (BuildContext context, int index) {
                           var item = controller.products[index];
                           return InkWell(
-                            onTap: () {
-                              Get.to(const ProductDetail());
-                            },
+                            onTap: () {},
                             child: Container(
                               width: 202.5.w,
                               height: 300.h,

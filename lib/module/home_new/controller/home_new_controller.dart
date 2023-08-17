@@ -5,11 +5,6 @@ import '../view/home_new_view.dart';
 
 class HomeNewController extends GetxController {
   HomeNewView? view;
-  @override
-  void onInit() {
-    doGetProduct();
-    super.onInit();
-  }
 
   List newCourse = [
     {
@@ -25,14 +20,6 @@ class HomeNewController extends GetxController {
           "https://i.ibb.co/drPFLVt/Green-and-Yellow-Minimal-Vegetable-Plant-Presentation-2.jpg"
     }
   ];
-
-  List<Other> other = <Other>[];
-  doGetProduct() async {
-    final api = await HomeService().getProduct();
-
-    other = api.other!;
-    update();
-  }
 
   List popuLarPlants = [
     {

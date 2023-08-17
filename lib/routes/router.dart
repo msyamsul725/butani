@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:butani/routes/routes_name.dart';
 
 import '../module/dashboard/view/dashboard_view.dart';
-import '../module/home/view/home_view.dart';
+
 import '../module/login/view/login_view.dart';
 import '../module/register/view/register_view.dart';
 import '../module/splashscreen/view/splashscreen_view.dart';
@@ -28,11 +28,6 @@ final router = GoRouter(
             builder: (context, state) => const RegisterView(),
           ),
         ]),
-    GoRoute(
-      path: '/home',
-      name: Routes.home,
-      builder: (context, state) => const HomeView(),
-    ),
     GoRoute(
       path: '/dashboard',
       name: Routes.dashboard,

@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import '../view/detail_product_view.dart';
+import '../view/profile_view.dart';
 
-class DetailProductController extends GetxController {
-  DetailProductView? view;
+class ProfileController extends GetxController {
+  ProfileView? view;
 
   @override
   void onInit() {
